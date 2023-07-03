@@ -16,5 +16,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+button {
+    cursor: pointer;
+    padding: 20px 40px;
+}
 
+button span {
+    margin: 5px;
+}
 </style>
