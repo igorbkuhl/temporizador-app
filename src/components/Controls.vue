@@ -1,17 +1,18 @@
 <template>
-    <button @click="changeStatus('running')" :disabled="isRunning">
+    <!-- $emit envia os comandos play, pause e stop para o MadCounter -->
+    <button @click="$emit('play'), changeStatus('running')" :disabled="isRunning">
         <span class="icon">
             <i class="fas fa-play"></i>
         </span>
         <span>Play</span>
     </button>
-    <button @click="changeStatus('paused')" :disabled="isPaused">
+    <button @click="$emit('pause'), changeStatus('paused')" :disabled="isPaused">
         <span class="icon">
             <i class="fas fa-pause"></i>
         </span>
         <span>Pause</span>
     </button>
-    <button @click="changeStatus('stopped')" :disabled="!isRunning && !isPaused">
+    <button @click="$emit('stop'), changeStatus('stopped')" :disabled="!isRunning && !isPaused">
         <span class="icon">
             <i class="fas fa-stop"></i>
         </span>
@@ -33,7 +34,7 @@ export default defineComponent({
     },
     methods: {
         changeStatus(status: string) {
-            console.log("O novo estado do computador é " + status);
+            console.log(`O novo estado do contador é ${status}`);
             switch(status) {
                 case 'running':
                     this.isRunning = true
