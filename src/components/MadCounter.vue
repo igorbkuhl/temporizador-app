@@ -1,9 +1,9 @@
 <template>
     <aside>
-        <Controls @play="start()" @stop="finish()" @pause="wait()"/>
+        <Controls @play="start()" @pause="wait()" @stop="finish()"/>
     </aside>
     <section>
-        <div id="counter">Contador: <span id="counterValue">{{ counterValue }}</span></div>
+        <div id="counter">Contador: <span id="counterValue">{{ counterValue }} s</span></div>
     </section>
 </template>
 
