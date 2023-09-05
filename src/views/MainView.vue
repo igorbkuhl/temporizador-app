@@ -33,11 +33,18 @@ export default defineComponent({
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
 * {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 h1, h4 {
   display: flex;
   justify-content: center;
+}
+
+h4 {
+  font-family: 'Dosis', sans-serif;  
 }
 </style>
