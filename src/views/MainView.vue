@@ -40,8 +40,7 @@ export default defineComponent({
 }
 
 h1, h4 {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 h4 {
